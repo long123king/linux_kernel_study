@@ -7,3 +7,8 @@
    we can pass page_offset as 0, 1, ..... series.
    and we got struct **page**.
 5. how to get page content via struct **page**?
+   all the struct **page** instances are stored in **mem_map** array, 
+   and the array will consume `32/4096` portion of all the physical memory.
+   `#define __page_to_pfn(page)    ((unsigned long)((page) - mem_map) + ARCH_PFN_OFFSET)`
+   is the macro to get **pfn**(Page Frame Number) from struct **page**.
+   
