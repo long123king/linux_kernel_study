@@ -1,1 +1,0 @@
-cmd_/home/daniel/linux_kernel_study/pslist.ko := ld -r -m elf_i386 -T /usr/src/linux-headers-3.13.0-24-generic/scripts/module-common.lds --build-id  -o /home/daniel/linux_kernel_study/pslist.ko /home/daniel/linux_kernel_study/pslist.o /home/daniel/linux_kernel_study/pslist.mod.o
